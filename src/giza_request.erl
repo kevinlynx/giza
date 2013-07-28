@@ -100,5 +100,6 @@ verify_version(Sock) ->
     ?SPHINX_MAJOR_PROTO ->
       ok;
     BadVersion ->
-      {error, {bad_version, BadVersion}}
+      {error, {bad_version, BadVersion}},
+      ok
   end.
