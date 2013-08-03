@@ -77,7 +77,13 @@ parse_results(Sock) ->
                 1 ->
                   64
               end,
-  read_matches(Sock, HitCount, IdBitSize,  Attrs, []).
+  Match = read_matches(Sock, HitCount, IdBitSize,  Attrs, []),
+  Total = giza_protocol:read_number(Sock, 32),
+  TotalFound = giza_protocol:read_number(Sock, 32),
+  Time = giza_protocol:read_number(Sock, 32),
+  % words
+  % return as proplists
+  [{total, Total}, {total_found, TotalFound}, {time, Time}, {match, Match}].
 
 read_matches(_Sock, 0, _IdBitSize, _Attrs, Accum) ->
   lists:reverse(Accum);
