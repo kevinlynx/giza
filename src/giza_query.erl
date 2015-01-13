@@ -33,6 +33,7 @@
 -export([max_id/1, max_id/2]).
 -export([filters/1, add_filter/3, add_filter/4, remove_filter/2]).
 -export([to_bytes/1]).
+-export([set_query_field/3]).
 
 %% @spec new() -> Result
 %%       Result = any()

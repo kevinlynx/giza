@@ -2,6 +2,8 @@
 
 **NOTE**: This is a forked project form [https://github.com/kevsmith/giza](https://github.com/kevsmith/giza), and it has been modified on sphinx version checking, so that giza can communicate with 2.0 sphinx.
 
+- export query setting function 
+
 ## Description
 giza is a client library for the Sphinx search engine (http://www.sphinxsearch.com). It speaks Sphinx's
 binary searchd protocol natively.
